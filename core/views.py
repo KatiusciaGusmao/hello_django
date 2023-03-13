@@ -10,5 +10,9 @@ from django.shortcuts import render, HttpResponse
 # def hello(request, nome): # mais de um parametro
 #     return HttpResponse('<h1>Hello {}<h1>'.format(nome))
 
-def hello(request, nome, idade): # mais de 2 parametros
-    return HttpResponse('<h1>Hello {} de {} anos <h1>'.format(nome,idade))
+# def hello(request, nome, idade): # mais de 2 parametros, nome e idade
+#     return HttpResponse('<h1>Hello {} de {} anos. <h1>'.format(nome, idade))
+
+def hello(request, numA, numB): # mais de 2 parametros, soma
+    soma = numA + numB
+    return HttpResponse('<h1>A soma é {}. <h1>'.format(soma))

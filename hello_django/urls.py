@@ -19,10 +19,15 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),   # padrão django
-    # path('hello/', views.hello),  #nova rota que leva até o método criado no vews do core
-#url com parametro
+    # path('hello/', views.hello),  #nova rota que leva até o método criado no views do core
+
+#url com 1 parametro
     #path('hello/<nome>/', views.hello)
-#url com 2 parametros
-    path('hello/<nome>/<int:idade>/', views.hello)
+
+#url com 2 parametros, nome e idade
+    # path('hello/<nome>/<int:idade>/', views.hello)
+
+#url com 2 parametros, soma
+    path('hello/<numA>/<numB>/', views.hello)
 
 ]
